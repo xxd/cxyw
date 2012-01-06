@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  contract_date: 2011-12-31 17:50:42
+  person_name: 
+  price: 9.99
+  quantity: 1
+  total_price: 9.99
+  saler: 
+
+two:
+  name: MyString
+  contract_date: 2011-12-31 17:50:42
+  person_name: 
+  price: 9.99
+  quantity: 1
+  total_price: 9.99
+  saler: 

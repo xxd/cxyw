@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<tr>
+	<td>
+<p>
+  <b>Name:</b>
+  <%= @record_software.name %>
+</p>
+</td>
+<p>
+  <b>Contract date:</b>
+  <%= @record_software.contract_date %>
+</p>
+
+<p>
+  <b>Person name:</b>
+  <%= @record_software.person_name %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @record_software.price %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @record_software.quantity %>
+</p>
+
+<p>
+  <b>Total price:</b>
+  <%= @record_software.total_price %>
+</p>
+
+<p>
+  <b>Saler:</b>
+  <%= @record_software.saler %>
+</p>
+</tr>
+
+<%= link_to 'Edit', edit_record_software_path(@record_software) %> |
+<%= link_to 'Back', record_softwares_path %>

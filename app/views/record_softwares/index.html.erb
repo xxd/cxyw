@@ -1,0 +1,35 @@
+<h1>软件资产列表</h1>
+
+<table class="bordered-table">
+  <tr>
+    <th>项目名称</th>
+    <th>签署合同时间</th>
+    <th>经办人</th>
+    <th>单价</th>
+    <th>数量</th>
+    <th>总价</th>
+    <th>合作方</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @record_softwares.each do |record_software| %>
+  <tr>
+    <td><%= record_software.name %></td>
+    <td><%= record_software.contract_date %></td>
+    <td><%= record_software.person_name %></td>
+    <td><%= record_software.price %></td>
+    <td><%= record_software.quantity %></td>
+    <td><%= record_software.total_price %></td>
+    <td><%= record_software.saler %></td>
+    <td><%= link_to '详情', record_software %></td>
+    <td><%= link_to '编辑', edit_record_software_path(record_software) %></td>
+    <td><%= link_to '删除', record_software, confirm: '确认删除?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '添加软件记录', new_record_software_path %>

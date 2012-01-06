@@ -1,0 +1,45 @@
+<%= form_for(@record_software) do |f| %>
+  <% if @record_software.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@record_software.errors.count, "error") %> prohibited this record_software from being saved:</h2>
+
+      <ul>
+      <% @record_software.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :项目名称 %> <br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :签署合同时间 %> <br />
+    <%= f.date_select :contract_date %>
+  </div>
+  <div class="field">
+    <%= f.label :经办人 %> <br />
+    <%= f.text_field :person_name %>
+  </div>
+  <div class="field">
+    <%= f.label :单价 %> <br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :数量 %> <br />
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :总价 %> <br />
+    <%= f.text_field :total_price %>
+  </div>
+  <div class="field">
+    <%= f.label :合作方 %> <br />
+    <%= f.text_field :saler %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
